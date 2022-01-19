@@ -8,8 +8,8 @@ jobs:
     steps:
       - checkout
       - run:
-        name: update-npm
-        command: sudo npm install -D
+          name: update-npm
+          command: sudo npm install -D
 
       - run:
           name: test
