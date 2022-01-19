@@ -10,7 +10,7 @@ jobs:
       - image: circleci/node:16.13.1
     steps:
       - checkout
-        - node/install-packages
+      - node/install-packages
 
       - coveralls/upload:
           path_to_lcov: ./final-coverage/lcov.info
