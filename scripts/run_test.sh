@@ -96,7 +96,7 @@ run_test() {
 
     printf "\n\n /************** START "$testFileName" **********************/ \n\n"     
 
-    npx truffle test ./test/$testFileNameWithJS -b 
+    npx truffle test ./test/$testFileNameWithJS -b  || { isERROR="TRUE"; break; } 
 
     printf "\n\n /************** FINISH "$testFileName" **********************/ \n\n" 
 
@@ -108,8 +108,10 @@ run_test() {
     if [[ $isERROR == "TRUE" ]]; 
     then
     printf "\n\n /************** TEST FAILED **********************/ \n\n"
+    exit 1
     else
     printf "\n\n /************** TEST SUCCESSFUL **********************/ \n\n"
+    exit 0
     fi
 
     #backup-migrations config
