@@ -7,10 +7,19 @@ jobs:
       - image: circleci/node:16.13.1
     steps:
       - checkout
+
+
       - run:
           name: update-npm
           command: sudo npm install -D
 
+      -restore_cache:
+          key: dependency-cache-{{ cehcksum "package.json"}}
+      
+      - save_cache:
+        key: dependency-cache-{{ cehcksum "package.json"}}
+        paths:
+          - ./node_modules
       - run:
           name: test
           command: npm test
