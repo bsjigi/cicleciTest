@@ -8,12 +8,12 @@ jobs:
     steps:
       - checkout
 
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json"}}
+
       - run:
           name: update-npm
           command: sudo npm install -D
-
-      - restore_cache:
-          key: dependency-cache-{{ checksum "package.json"}}
 
       - save_cache:
           key: dependency-cache-{{ checksum "package.json"}}
