@@ -2,15 +2,21 @@ version: 2.1
 
 # Define the jobs we want to run for this project
 jobs:
-  test:
+  build:
     docker:
       - image: circleci/node:16.13.1
     steps:
       - checkout
-      - run: sudo npm install -D && npm test
+      - run:
+        name: update-npm
+        command: "sudo npm install -D"
+
+      - run:
+          name: test
+          command: "npm test"
 
 # Orchestrate our job run sequence
 workflows:
   build_and_test:
     jobs:
-      - test
+      - build
