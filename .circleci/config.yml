@@ -8,8 +8,6 @@ jobs:
     steps:
       - checkout
       - run: sudo npm install -D && npm test
-      - store_test_results:
-        path: ./test-results
 
 # Orchestrate our job run sequence
 workflows:
