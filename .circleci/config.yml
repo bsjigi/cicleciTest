@@ -10,13 +10,13 @@ jobs:
       - checkout
       - run:
           name: update-npm
-          command: sudo npm install -D
+
   test:
     docker:
       - image: circleci/node:16.13.1
     steps:
       - checkout
-      - run: npm test
+      - run: sudo npm install -D && npm test
 
 # Orchestrate our job run sequence
 workflows:
