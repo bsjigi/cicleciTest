@@ -16,6 +16,6 @@ contract("WhitelistPaymaster", (accounts) => {
   });
 
   it("false test", async () => {
-    assert.equal(1 + 1, 2, "incorrect");
+    assert.equal(2, 2, "incorrect");
   });
 });
