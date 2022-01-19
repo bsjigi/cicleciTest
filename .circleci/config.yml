@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   node: circleci/node@5.0.0
-  coveralls: coveralls/coveralls@1.0.6
+  coveralls: coveralls/coveralls@1.0.5
 jobs:
   executor: node/default
   build:
