@@ -7,7 +7,9 @@ jobs:
       - image: circleci/node:16.13.1
     steps:
       - checkout
-      - run: sudo npm install -D && npx truffle test test/math1.js
+      - command: sudo npm install -D && npm test
+      - store_test_results:
+        path: ./build/test-results
 
 # Orchestrate our job run sequence
 workflows:
