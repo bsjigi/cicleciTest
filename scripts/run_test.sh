@@ -96,7 +96,7 @@ run_test() {
 
     printf "\n\n /************** START "$testFileName" **********************/ \n\n"     
 
-    npx truffle test ./test/$testFileNameWithJS -b  || { isERROR="TRUE"; break; } 
+    npx truffle test ./test/$testFileNameWithJS -b 
 
     printf "\n\n /************** FINISH "$testFileName" **********************/ \n\n" 
 
