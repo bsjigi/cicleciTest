@@ -10,7 +10,7 @@ jobs:
       - checkout
       - run:
           name: update-npm
-          command: sudo npm install
+          command: sudo npm install -D
   test:
     docker:
       - image: circleci/node:16.13.1
