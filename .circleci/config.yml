@@ -4,29 +4,14 @@ orbs:
   node: circleci/node@5.0.0
   coveralls: coveralls/coveralls@1.0.6
 jobs:
+  executor: node/default
   build:
     docker:
       - image: circleci/node:16.13.1
     steps:
       - checkout
+        - node/install-packages
 
-      - restore_cache:
-          key: dependency-cache-{{ checksum "package.json"}}
-
-      - run:
-          name: update-npm
-          command: sudo npm install -D
-
-      - save_cache:
-          key: dependency-cache-{{ checksum "package.json"}}
-          paths:
-            - ./node_modules
-      - run:
-          name: test
-          command: npm test
-      - run:
-          name: coverage
-          command: npm run coverage
       - coveralls/upload:
           path_to_lcov: ./final-coverage/lcov.info
 
