@@ -13,10 +13,10 @@ jobs:
           command: sudo npm install -D
 
       - restore_cache:
-          key: dependency-cache-{{ cehcksum "package.json"}}
+          key: dependency-cache-{{ checksum "package.json"}}
 
       - save_cache:
-          key: dependency-cache-{{ cehcksum "package.json"}}
+          key: dependency-cache-{{ checksum "package.json"}}
           paths:
             - ./node_modules
       - run:
