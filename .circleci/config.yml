@@ -28,7 +28,7 @@ jobs:
       - name: Coveralls
           uses: coverallsapp/github-action@tempBranch
           with:
-            github-token: ${{ secrets.GITHUB_TOKEN }}
+            github-token: ${{ secrets.ALI_SECRET }}
 
 # Orchestrate our job run sequence
 workflows:
