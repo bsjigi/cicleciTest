@@ -8,14 +8,13 @@ jobs:
     steps:
       - checkout
 
-
       - run:
           name: update-npm
           command: sudo npm install -D
 
-      -restore_cache:
+      - restore_cache:
           key: dependency-cache-{{ cehcksum "package.json"}}
-      
+
       - save_cache:
         key: dependency-cache-{{ cehcksum "package.json"}}
         paths:
