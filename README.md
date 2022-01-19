@@ -1,1 +1,1 @@
-[![CircleCI](https://circleci.com/gh/aliabdolazimi10/cicleciTest.svg?style=svg)](https://circleci.com/gh/aliabdolazimi10/cicleciTest)
+[![CircleCI](https://circleci.com/gh/aliabdolazimi10/cicleciTest.svg?style=shield)](https://circleci.com/gh/aliabdolazimi10/cicleciTest)
