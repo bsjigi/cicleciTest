@@ -25,6 +25,10 @@ jobs:
       - run:
           name: coverage
           command: npm run coverage
+      - name: Coveralls
+          uses: coverallsapp/github-action@tempBranch
+          with:
+            github-token: ${{ secrets.GITHUB_TOKEN }}
 
 # Orchestrate our job run sequence
 workflows:
