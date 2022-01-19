@@ -4,11 +4,11 @@
   "description": "test ci cd",
   "main": "index.js",
   "dependencies": {
-    "ganache": "^6.4.5",
-    "ganache-cli": "^6.12.2",
     "truffle": "^5.4.16"
   },
   "devDependencies": {
+    "ganache": "^6.4.5",
+    "ganache-cli": "^6.12.2",
     "chai": "^4.3.4",
     "chai-as-promised": "^7.1.1",
     "coveralls": "^3.1.0",
