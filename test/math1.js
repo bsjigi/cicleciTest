@@ -11,7 +11,11 @@ contract("WhitelistPaymaster", (accounts) => {
     });
   });
 
-  it("deploys successfully", async () => {
-    console.log("sssss");
+  it("true test", async () => {
+    assert.equal(1, 1, "incorrect");
+  });
+
+  it("false test", async () => {
+    assert.equal(1, 2, "incorrect");
   });
 });
