@@ -8,7 +8,7 @@ module.exports = {
   skipFiles: ["external"],
   measureStatementCoverage: true,
   measureFunctionCoverage: true,
-  istanbulReporter: ["html"],
+  istanbulReporter: ["lcov"],
   mocha: {
     timeout: 0,
     grep: "@skip-on-coverage", // Find everything with this tag
