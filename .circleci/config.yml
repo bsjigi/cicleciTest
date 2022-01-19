@@ -9,8 +9,14 @@ jobs:
       - checkout
       - run:
         name: update-npm
-        command: "sudo npm install -D"
+        command: sudo npm install -D
 
       - run:
           name: test
-          command: "npm test"
+          command: npm test
+
+# Orchestrate our job run sequence
+workflows:
+  build_and_test:
+    jobs:
+      - build
