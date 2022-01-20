@@ -10,26 +10,16 @@ jobs:
       - image: circleci/node:16.13.1
     steps:
       - checkout
-        - node/install-packages
-      - restore_cache:
-          key: dependency-cache-{{ checksum "package.json"}}
 
-      - run:
-          name: update-npm
-          command: sudo npm install -D
 
-      - save_cache:
-          key: dependency-cache-{{ checksum "package.json"}}
-          paths:
-            - ./node_modules
       - run:
           name: test
           command: npm test
       - run:
           name: coverage
-          command: npm run coverage
+          command: npx truffle run coverage
       - coveralls/upload:
-          path_to_lcov: ./final-coverage/lcov.info
+          path_to_lcov: ./coverage/lcov.info
 
 # Orchestrate our job run sequence
 workflows:
