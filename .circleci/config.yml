@@ -9,7 +9,9 @@ jobs:
       - image: circleci/node:16.13.1
     steps:
       - checkout
-      - node/install-packages
+      - run:
+          name: Install and Make
+          command: npm install && npx truffle run coverage
 
       - coveralls/upload:
           path_to_lcov: ./coverage/lcov.info
