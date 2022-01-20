@@ -21,4 +21,8 @@ contract Math {
     function sub3(uint256 _x, uint256 _y) public pure returns (uint256) {
         return _x - _y;
     }
+
+    function sub4(uint256 _x, uint256 _y) public pure returns (uint256) {
+        return _x - _y;
+    }
 }
