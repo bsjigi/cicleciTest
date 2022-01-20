@@ -25,9 +25,9 @@ jobs:
           command: npm test
       - run:
           name: coverage
-          command: npx truffle run coverage
+          command: npm run coverage
       - coveralls/upload:
-          path_to_lcov: ./coverage/lcov.info
+          path_to_lcov: ./final-coverage/lcov.info
 
 # Orchestrate our job run sequence
 workflows:
