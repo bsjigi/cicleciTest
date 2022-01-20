@@ -1,7 +1,6 @@
 version: 2.1
 
 jobs:
-  executor: node/default
   build:
     docker:
       - image: circleci/node:16.13.1
