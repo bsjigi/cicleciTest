@@ -10,19 +10,11 @@ contract Math {
         return _x - _y;
     }
 
-    function sub1(uint256 _x, uint256 _y) public pure returns (uint256) {
-        return _x - _y;
+    function mul(uint256 _x, uint256 _y) public pure returns (uint256) {
+        return _x * _y;
     }
 
-    function sub2(uint256 _x, uint256 _y) public pure returns (uint256) {
-        return _x - _y;
-    }
-
-    function sub3(uint256 _x, uint256 _y) public pure returns (uint256) {
-        return _x - _y;
-    }
-
-    function sub4(uint256 _x, uint256 _y) public pure returns (uint256) {
-        return _x - _y;
+    function div(uint256 _x, uint256 _y) public pure returns (uint256) {
+        return _x / _y;
     }
 }
