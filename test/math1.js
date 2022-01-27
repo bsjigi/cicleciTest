@@ -13,7 +13,6 @@ contract("WhitelistPaymaster", (accounts) => {
 
   it("true test", async () => {
     result = await mathInstance.add(1, 1);
-    result2 = await mathInstance.sub(1, 1);
 
     assert.equal(1, 1, "incorrect");
   });
