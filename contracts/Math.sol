@@ -13,8 +13,4 @@ contract Math {
     function mul(uint256 _x, uint256 _y) public pure returns (uint256) {
         return _x * _y;
     }
-
-    function div(uint256 _x, uint256 _y) public pure returns (uint256) {
-        return _x / _y;
-    }
 }
