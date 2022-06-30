@@ -2,19 +2,13 @@ version: 2.1
 orbs:
   node: circleci/node@5.0.0
   coveralls: coveralls/coveralls@1.0.6
-  bridgecrew: bridgecrew/bridgecrew@1.0.5
 jobs:
-  executor: bridgecrew/default
+  executor: node/default
   build:
     docker:
       - image: circleci/node:16.13.1
     steps:
       - checkout
-      - bridgecrew/scan:
-          directory: .
-          api-key-variable: BC_API_KEY 
-          prisma-api-url: https://api.anz.prismacloud.io
-          
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json"}}
 
